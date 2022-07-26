@@ -1,0 +1,184 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Stats preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.google.com/specimen/Inter");
+      @import url("https://fonts.googleapis.com/css2?&family=Lexend+Deca:wght@100&display=swap");
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --Very-dark-blue: hsl(233, 47%, 7%);
+        --Dark-desaturated-blue: hsl(244, 38%, 16%);
+        --Soft-violet: rgb(170, 92, 219);
+
+        --White: hsl(0, 0%, 100%);
+        --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+        --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+      }
+
+      /* .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      } */
+
+      section {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--Very-dark-blue);
+        font-family: "Inter", sans-serif;
+      }
+      .main {
+        width: 800px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--Dark-desaturated-blue);
+        color: var(--White);
+        border-radius: 10px;
+      }
+      .one {
+        width: 50%;
+        align-self: flex-start;
+        /* background: rgb(161, 135, 135); */
+        padding: 2rem;
+      }
+      .one p:nth-child(1) {
+        font-size: 2rem;
+        margin: 13px 0;
+        font-weight: 700;
+      }
+      .one p:nth-child(2) {
+        margin: 15px 0;
+        font-size: 13px;
+        font-weight: 400;
+        font-family: "Lexend Deca";
+      }
+      .one p span {
+        color: var(--Soft-violet);
+      }
+      .two {
+        width: 50%;
+        height: 100%;
+        background-image: linear-gradient(
+            0deg,
+            rgba(170, 92, 219, 0.659),
+            rgba(170, 92, 219, 0.659)
+          ),
+          url("./images/image-header-desktop.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      .two img {
+        width: 100%;
+        background-size: cover;
+      }
+      .num {
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        margin: 2rem 0;
+        font-size: 10px;
+      }
+      .num div span:nth-last-child(1) {
+        font-size: 2rem;
+      }
+      .num div span:nth-last-child(2) {
+        font-size: 2rem;
+      }
+      .num div span:nth-last-child(3) {
+        font-size: 2rem;
+      }
+      @media (max-width: 600px) {
+        section {
+          height: auto;
+          padding: 20px;
+        }
+        .main {
+          width: 100%;
+          flex-direction: column-reverse;
+          height: auto;
+          margin: 0 15px;
+          text-align: center;
+        }
+        .one {
+          width: 100%;
+        }
+        .two {
+          width: 100%;
+          height: 300px;
+        }
+        .num {
+          flex-direction: column;
+          /* text-align: center; */
+        }
+        .num div {
+          margin: 10px 0;
+        }
+        .two {
+          border-top-right-radius: 0px;
+          border-bottom-right-radius: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="main">
+        <div class="one">
+          <p>Get <span>insights</span> that help your business grow.</p>
+          <p>
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </p>
+          <div class="num">
+            <div>
+              <span>10k+ </span>
+              <br />
+              companies
+            </div>
+            <div>
+              <span>314</span>
+              <br />
+              templates
+            </div>
+            <div>
+              <span>12m+</span>
+              <br />
+              queries
+            </div>
+          </div>
+        </div>
+        <div class="two"></div>
+      </div>
+    </section>
+  </body>
+</html>
